@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="google-signin-client_id" content="762622375439-9i0f64683rbljqon9kgoui7jmmtce440.apps.googleusercontent.com">
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +34,24 @@
     </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      
+    </div>
+    
+  
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload"
+         data-client_id="762622375439-9i0f64683rbljqon9kgoui7jmmtce440.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+    <script type="text/javascript" charset="utf-8">
+    function handleCredentialResponse(){
+        console.log("sork")
+    }
+    </script>
+
     <script type="module" src="/src/main.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>
